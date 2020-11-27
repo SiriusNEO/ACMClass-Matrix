@@ -1,0 +1,1 @@
+/usr/bin/c++    -static-libgcc -static-libstdc++ CMakeFiles/code.dir/BasicTest.cpp.o CMakeFiles/code.dir/AdvanceTest.cpp.o CMakeFiles/code.dir/testmain.cpp.o  -o code 

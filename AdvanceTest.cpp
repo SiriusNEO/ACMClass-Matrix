@@ -1,6 +1,8 @@
+/*
 #include "testint.hpp"
 #include "matrix.hpp"
 #include <iostream>
+#include <functional>
 #include <sstream>
 #include <string>
 
@@ -67,7 +69,9 @@ std::pair<bool, std::string> resizeTest()
 	for (size_t i = 0; i < N; i++)
 		for (size_t j = 0; j < M; j++)
 			judgecode(0, i * M + j) = b(i, j).judge();
+
 	b.resize(M, N);
+
 	for (size_t i = 0; i < M; i++)
 		for (size_t j = 0; j < N; j++)
 			if (b(i, j).judge() != judgecode(0, i * N + j))
@@ -95,7 +99,9 @@ std::pair<bool, std::string> moveTest()
 	for (size_t i = 0; i < N; i++)
 		for (size_t j = 0; j < M; j++)
 			judgecode(i, j) = c(i, j).judge();
+
 	Matrix<testint> d = std::move(c);
+
 	for (size_t i = 0; i < N; i++)
 		for (size_t j = 0; j < M; j++)
 			if (d(i, j).judge() != judgecode(i, j))
@@ -188,7 +194,7 @@ int main()
 	std::string information;
 	for (auto &&testcase : testcases)
 	{
-		std::cout << testcase.first << ": ";
+        std::cout << testcase.first << ":";
 		std::tie(result, information) = testcase.second();
 		if (result)
 		{
@@ -200,4 +206,4 @@ int main()
 	}
 	return 0;
 }
-
+*/

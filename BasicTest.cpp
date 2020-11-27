@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <utility>
 #include <string>
@@ -246,8 +247,7 @@ std::pair<bool, std::string> testOperations()
 	{
 		auto b = a;
 		b += a;
-		if (b != 2 * a)
-			return WA("+=");
+		if (b != 2 * a) return WA("+=");
 		b -= a;
 		if (b != a)
 			return WA("-=");
@@ -311,8 +311,6 @@ struct Int
 
 std::pair<bool, std::string> testIterator()
 {
-
-
 	Matrix<int> a = {
 			// 0  1  2  3
 			{ 0,  1,  2,  3 },    // 0
@@ -345,7 +343,7 @@ std::pair<bool, std::string> testIterator()
 		for (auto iter = beg; iter != end; ++iter)
 		{
 			if (ans[k++] != *iter)
-				return WA("subMatrix");
+			    return WA("subMatrix");
 		}
 	} catch (...)
 	{
