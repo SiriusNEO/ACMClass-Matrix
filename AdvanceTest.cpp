@@ -1,4 +1,4 @@
-/*
+
 #include "testint.hpp"
 #include "matrix.hpp"
 #include <iostream>
@@ -93,20 +93,17 @@ std::pair<bool, std::string> moveTest()
 		for (size_t j = 0; j < M; j++)
 			if (bak(i, j) != b(i, j))
 				return WA("move");
-
 	Matrix<testint> c(N, M);
 	Matrix<int> judgecode(N, M);
 	for (size_t i = 0; i < N; i++)
 		for (size_t j = 0; j < M; j++)
 			judgecode(i, j) = c(i, j).judge();
-
 	Matrix<testint> d = std::move(c);
 
 	for (size_t i = 0; i < N; i++)
 		for (size_t j = 0; j < M; j++)
 			if (d(i, j).judge() != judgecode(i, j))
 				return WA("copy the element");
-
 	return { true, "Congratulation" };
 }
 
@@ -185,7 +182,6 @@ std::pair<bool, std::string> exceptionTest()
 
 int main()
 {
-
 	std::pair<std::string, std::function<std::pair<bool, std::string>(void)>> testcases[] = {{ "resizeTest",    resizeTest },
 																							 { "moveTest",      moveTest },
 																							 { "exceptionTest", exceptionTest }};
@@ -206,4 +202,3 @@ int main()
 	}
 	return 0;
 }
-*/
